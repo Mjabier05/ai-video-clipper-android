@@ -45,6 +45,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.mjabier.videoclipper.data.ClipSegment
+import com.mjabier.videoclipper.ui.theme.VideoClipperTheme
 import java.util.Locale
 
 class MainActivity : ComponentActivity() {
@@ -78,9 +80,7 @@ fun VideoClipperApp() {
 
 @Composable
 fun HomeScreen(onImportVideo: () -> Unit) {
-    Scaffold(
-        topBar = { AppTopBar(title = "Video Clipper AI") }
-    ) { innerPadding ->
+    Scaffold(topBar = { AppTopBar(title = "Video Clipper AI") }) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -275,10 +275,3 @@ fun formatDuration(ms: Long): String {
     val seconds = totalSeconds % 60
     return String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds)
 }
-
-
-data class ClipSegment(
-    val startMs: Long,
-    val endMs: Long,
-    val label: String
-)

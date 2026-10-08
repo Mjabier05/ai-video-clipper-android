@@ -1,6 +1,7 @@
 package com.mjabier.videoclipper.ui.theme
 
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
@@ -30,6 +31,8 @@ private val DarkColors = darkColorScheme(
     onSurface = Color(0xFFEAF2FF),
 )
 
+val AppTypography = Typography()
+
 @Composable
 fun VideoClipperTheme(
     darkTheme: Boolean = false,
@@ -38,6 +41,7 @@ fun VideoClipperTheme(
     val colors = if (darkTheme) DarkColors else LightColors
     MaterialTheme(
         colorScheme = colors,
+        typography = AppTypography,
         content = content
     )
 }
