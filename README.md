@@ -1,2 +1,5 @@
-# ai-video-clipper-android
-Aplikasi Video Clipper AI untuk Android - Potong, edit, dan bagikan video dengan teknologi AI
+package com.mjabier.videoclipper.ui.theme
+
+import androidx.compose.material3.Typography
+
+val Typography = Typography()
