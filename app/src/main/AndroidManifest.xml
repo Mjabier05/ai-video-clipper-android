@@ -1,25 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+# Video Clipper AI Android
 
-    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
+Aplikasi Android untuk membuat video pendek dari file video lama dengan UI editor sederhana dan AI suggestion.
 
-    <application
-        android:allowBackup="true"
-        android:icon="@android:drawable/sym_def_app_icon"
-        android:label="Video Clipper AI"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.VideoClipperAI">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
+## Fitur
+- Import video dari galeri
+- Preview video langsung di aplikasi
+- Trim start/end dengan slider
+- AI suggestion timeline berdasarkan durasi video
+- Tampilan modern dengan Jetpack Compose
+- Struktur siap dikembangkan ke fitur export, subtitle, dan smart cut
 
-</manifest>
+## Stack
+- Kotlin
+- Jetpack Compose
+- Material 3
+- Media3 ExoPlayer
+- FFmpeg Kit
+
+## Cara menjalankan
+1. Buka project di Android Studio.
+2. Jalankan sync Gradle.
+3. Pilih emulator atau perangkat Android.
+4. Tekan tombol Import Video.
+
+## Catatan
+Versi ini adalah tahap lanjutan dari aplikasi starter: sudah ada preview video dan trim UI yang fungsional, serta AI suggestion berdasarkan durasi video.
